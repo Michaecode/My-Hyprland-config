@@ -1,0 +1,86 @@
+# -----------------------
+# Hyprland minimal config
+# -----------------------
+
+
+#monitor 
+   #syntax: monitor = NAME, RESOLUTION@REFRESH, POSITION, SCALE
+monitor = HDMI-A-5, preferred, 0x-550, 1, transform, 1 
+monitor = eDP-1, preferred, auto, 1
+monitor = DP-1, 1680x1050@60, auto, 1
+
+
+#workspace monitor settings
+workspace = 3, monitor:HDMI-A-5
+workspace = 1, monitor:eDP-1
+workspace = 2, monitor:DP-1
+workspace = 1, persistent:true
+workspace = 2, persistent:true
+workspace = 3, persistent:true
+
+
+#exec commands
+exec-once = kitty
+exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec-once = waybar
+exec-once = hyprpaer
+
+
+#input 
+input {
+  kb_layout = us, es, it
+  kb_options = grp:win_space_toggle
+  follow_mouse = 1
+
+  touchpad {
+    natural_scroll = true
+    tap-to-click = true
+    disable_while_typing = true
+  }
+}
+
+
+#general commands
+general {
+  gaps_in = 5
+  gaps_out = 10
+  border_size = 2
+}
+
+
+#bind commands
+bind = SUPER SHIFT, F, fullscreen
+bind = SUPER SHIFT, SPACE, togglefloating
+bind = SUPER SHIFT, H, movewindow, l
+bind = SUPER SHIFT, L, movewindow, r
+bind = SUPER SHIFT, K, movewindow, u
+bind = SUPER SHIFT, J, movewindow, d
+bind = SUPER, 1, workspace, 1
+bind = SUPER, 2, workspace, 2
+bind = SUPER, 3, workspace, 3
+bind = SUPER, 4, workspace, 4
+bind = SUPER, 5, workspace, 5
+bind = SUPER, 6, workspace, 6
+bind = SUPER, RETURN, exec, kitty
+bind = SUPER, D, exec, wofi --show drun
+bind = SUPER SHIFT, R, exec, hyprctl reload
+bind = SUPER, Q, killactive,
+bind = SUPER, S, exec, spotify
+bind = SUPER, B, exec, brave
+bind = SUPER, F, exec, nautilus
+bind = SUPER, P, exec, passwordsecure
+bind = SUPER, K, exec, konsole
+bind = SUPER, M, exec, firefox
+bind = , XF86AudioRaiseVolume, exec, pamixer -i 5
+bind = , XF86AudioLowerVolume, exec, pamixer -d 5
+bind = , XF86AudioMute, exec, pamixer -t
+bind = , XF86MonBrightnessUp, exec, brightnessctl set +10%
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 10%-
+
+
+#env 
+env = XCURSOR_THEME,Bibata-Modern-Classic
+env = XCURSOR_SIZE,24
+env = HYPRCURSOR_THEME,Bibata-Modern-Classic
+env = HYPRCURSOR_SIZE,24
+
