@@ -10,12 +10,37 @@ I wanted a simple, minimal and comfortable setup without too many visual effects
 ## Disclaimer
 This configuration can be not plug-and-play, due the setting specific for my use, for example for the ``binds``, or for the ``exec``. 
 
+## Requirements
+### Required
+- **Hyprland** — Window manager
+- **Waybar** — Status bar
+- **Kitty** — Terminal emulator
+- **swaybg** — Wallpaper
+- **wofi** — Application launcher
+- **hypridle** — Idle management
+- **polkit-gnome** — Authentication agent
+
+### Optional
+
+These packages are only required if you want to use the related functionality.
+
+- **grim** — Screenshot utility
+- **slurp** — Region selector for screenshots and screen recording
+- **wl-clipboard** — Clipboard utilities
+- **wf-recorder** — Screen recording utility
+- **pamixer** — Volume control
+- **brightnessctl** — Brightness control
+- **playerctl** — Media player control
+
+> **Note:** Some keybinds launch applications such as Firefox, Brave, Spotify, Nautilus and Kitty. These applications are not required and can be changed in `binds.conf` to match your setup.
 
 ## Hyprland.conf
 The ``hyprland.conf`` is the main Hyprland configuration file, with basic things, and command for the source of the others files of config. 
 
 ### Wallpaper
 For the wallpaper i used ``swaybg``, because it was the only one that worked properly on my system.
+
+> **Note:** You will need to change the wallpaper path in `hyprland.conf` to match your own system. 
 
 ### Monitors
 Basically, in this section there is my config of the monitors position. 
@@ -40,6 +65,8 @@ The following subtitles are details about what i used for different things about
 To do screenshots i use ``slurp`` with a bind assigned to it, with assigned also the location of the screenshot taken.
 The same for screenshot only a part of the screen.
 And the same also for do a recording of the screen.
+
+> **Note:** Some keybinds launch applications such as Firefox, Brave, Spotify, Nautilus and Kitty. These applications are not required and can be changed in `binds.conf` to match your setup.
 
 ### Workspaces
 The workspaces are configured that there are nine, and you select which one use using ``$mainMod + (number of the workspace)``
