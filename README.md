@@ -34,6 +34,20 @@ These packages are only required if you want to use the related functionality.
 
 > **Note:** Some keybinds launch applications such as Firefox, Brave, Spotify, Nautilus and Kitty. These applications are not required and can be changed in `binds.conf` to match your setup.
 
+## Waybar
+
+Waybar is used as the status bar at the top of the screen.
+
+### Music
+
+The left side of Waybar includes the currently playing music using the **MPRIS** module. It displays the player, artist and title, with a small tooltip containing additional information when hovering over the music module.
+
+The music module works with MPRIS-compatible players such as Spotify, Firefox and VLC.
+
+The Waybar configuration for this is located in:
+- `waybar/config.jsonc` — music module configuration
+- `waybar/style.css` — module styling
+
 ## Hyprland.conf
 The ``hyprland.conf`` is the main Hyprland configuration file, with basic things, and command for the source of the others files of config. 
 
