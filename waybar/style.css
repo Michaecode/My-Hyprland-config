@@ -9,6 +9,7 @@ window#waybar {
 }
 
 #workspaces,
+#mpris,
 #window,
 #cpu,
 #memory,
@@ -40,6 +41,15 @@ window#waybar {
 
 #window {
     color: #b5f5c5;
+}
+
+#mpris {
+    color: #50fa7b;
+}
+
+#mpris:hover {
+    background: rgba(80, 250, 123, 0.10);
+    border-radius: 6px;
 }
 
 #cpu,
